@@ -13,9 +13,8 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
-	/* Construtor padrão */
 	public Aluno() {
-		// TODO implementar quando necessário
+		// TODO Construtor padrão
 	}
 	
 	public Aluno(String nomePadrao) {
