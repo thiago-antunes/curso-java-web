@@ -39,13 +39,9 @@ public class PrimeiraClasseJava {
 		aluno1.setNota3(Double.parseDouble(nota3));
 		aluno1.setNota4(Double.parseDouble(nota4));
 		
-		System.out.println("O nome do aluno 1 é: " + aluno1.getNome());
-		System.out.println("A idade do aluno é: " + aluno1.getIdade());
-		System.out.println("Nome da mãe do aluno: " + aluno1.getNomeMae());
-		System.out.println("A data de nascimento do aluno 1 é: " + aluno1.getDataNascimento());
-		System.out.println("A média das notas é: " + aluno1.getMediaNota());
+		System.out.println(aluno1.toString());
+		System.out.println("Média do aluno: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		System.out.println("======================================================");
 		
 	}
 
