@@ -6,7 +6,7 @@ public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
 		
-		Aluno aluno1 = new Aluno(); // Aqui será o Joao
+		Aluno aluno1 = new Aluno();
 		aluno1.setNome("João da Silva");
 		aluno1.setIdade(50);
 		aluno1.setDataNascimento("18/10/1987");
@@ -25,22 +25,8 @@ public class PrimeiraClasseJava {
 		System.out.println("O nome do aluno 1 é: " + aluno1.getIdade());
 		System.out.println("O nome do aluno 1 é: " + aluno1.getDataNascimento());
 		System.out.println("A média das notas é: " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("======================================================");
-		
-		Aluno aluno2 = new Aluno(); // Aqui será o Pedro
-		aluno2.setNome("Pedro");
-		aluno2.setIdade(40);
-		aluno2.setDataNascimento("10/10/1970");
-		
-		System.out.println("O nome do aluno 2 é: " + aluno2.getNome());
-		System.out.println("O nome do aluno 2 é: " + aluno2.getIdade());
-		System.out.println("O nome do aluno 2 é: " + aluno2.getDataNascimento());
-		
-		Aluno aluno3 = new Aluno(); // Aqui será o Alex
-		
-		Aluno aluno4 = new Aluno("Maria");
-		
-		Aluno aluno5 = new Aluno("José", 50);
 		
 	}
 
