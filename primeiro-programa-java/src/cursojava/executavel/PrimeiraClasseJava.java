@@ -18,7 +18,8 @@ public class PrimeiraClasseJava {
 		String nomePai = JOptionPane.showInputDialog("Qual o nome do pai do aluno?");
 		String dataMatricula = JOptionPane.showInputDialog("Qual a data da matrícula do aluno?");
 		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola do aluno?");
-		String serieMatriculado = JOptionPane.showInputDialog("Qual a série matriculada do aluno?");
+		String serieMatriculado = JOptionPane.showInputDialog("Qual a série matriculada do Aluno?");
+		
 		
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome(nome);
