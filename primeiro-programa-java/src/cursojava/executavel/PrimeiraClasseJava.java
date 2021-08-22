@@ -1,7 +1,5 @@
 package cursojava.executavel;
 
-import java.util.Iterator;
-
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
@@ -20,7 +18,7 @@ public class PrimeiraClasseJava {
 		String nomePai = JOptionPane.showInputDialog("Qual o nome do pai do aluno?");
 		String dataMatricula = JOptionPane.showInputDialog("Qual a data da matrícula do aluno?");
 		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola do aluno?");
-		String serieMatriculado = JOptionPane.showInputDialog("Qual a séria matriculado do aluno?");
+		String serieMatriculado = JOptionPane.showInputDialog("Qual a série matriculada do aluno?");
 		
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome(nome);
@@ -45,7 +43,14 @@ public class PrimeiraClasseJava {
 			aluno1.getDisciplinas().add(disciplina);
 		}
 		
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+		if (escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3 ou 4? ");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+		}
+		
 		System.out.println(aluno1.toString());
+		System.out.println(aluno1.getDisciplinas().toString());
 		System.out.println("Média do aluno: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 	}
