@@ -124,8 +124,12 @@ public class Aluno {
 
 	/* Método que retorna a média do Aluno */
 	public double getMediaNota() {
-		//TODO: Implementar
-		return 0;
+		double somaNotas = 0.0;
+		
+		for (Disciplina disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		return somaNotas / disciplinas.size();
 	}
 	
 	/* Método que retorna true para aprovado e false para reprovado */
