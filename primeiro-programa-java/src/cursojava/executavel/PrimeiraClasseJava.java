@@ -1,7 +1,6 @@
 package cursojava.executavel;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -72,6 +71,7 @@ public class PrimeiraClasseJava {
 			alunos.add(aluno1);
 		}
 
+		/* Separando as listas */
 		for (Aluno aluno : alunos) {
 			if (aluno.getAlunoAprovado2().equalsIgnoreCase(StartusAluno.APROVADO)) {
 				alunosAprovados.add(aluno);
@@ -81,6 +81,20 @@ public class PrimeiraClasseJava {
 				alunosReprovados.add(aluno);
 			}
 		}
-
+		
+		System.out.println("-------------------- Lista de Aprovados --------------------");
+		for(Aluno aluno : alunosAprovados) {
+			System.out.println(aluno.getNome() + "-> Resultado: " + aluno.getAlunoAprovado2() + " com média: " + aluno.getMediaNota());
+		}
+		
+		System.out.println("-------------------- Lista de Reprovados --------------------");
+		for(Aluno aluno : alunosReprovados) {
+			System.out.println(aluno.getNome() + "-> Resultado: " + aluno.getAlunoAprovado2() + " com média: " + aluno.getMediaNota());
+		}
+		
+		System.out.println("-------------------- Lista em Recuperação --------------------");
+		for(Aluno aluno : alunosRecuperacao) {
+			System.out.println(aluno.getNome() + "-> Resultado: " + aluno.getAlunoAprovado2() + " com média: " + aluno.getMediaNota());
+		}
 	}
 }
