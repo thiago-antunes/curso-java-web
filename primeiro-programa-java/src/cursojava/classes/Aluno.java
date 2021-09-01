@@ -3,6 +3,8 @@ package cursojava.classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import cursojava.contantes.StartusAluno;
+
 /* Classe que representa cada aluno */
 public class Aluno {
 
@@ -132,26 +134,16 @@ public class Aluno {
 		return somaNotas / disciplinas.size();
 	}
 	
-	/* Método que retorna true para aprovado e false para reprovado */
-	public boolean getAlunoAprovado() {
-		double media = this.getMediaNota();
-		if (media >= 70) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
 		if (media >= 50) {
 			if (media >= 70) {
-				return "Aluno está aprovado";
+				return StartusAluno.APROVADO;
 			} else {
-				return "Aluno está em recuperação";
+				return StartusAluno.RECUPERACAO;
 			}
 		} else {
-			return "Aluno está reprovado";
+			return StartusAluno.REPROVADO;
 		}
 	}
 
