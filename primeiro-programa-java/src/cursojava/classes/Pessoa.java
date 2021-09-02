@@ -65,5 +65,10 @@ public class Pessoa {
 	public void setNomePai(String nomePai) {
 		this.nomePai = nomePai;
 	}
+	
+	/* Métodos auxiliares */
+	public boolean pessoaMaiorIdade() {
+		return idade >= 18;
+	}
 
 }
