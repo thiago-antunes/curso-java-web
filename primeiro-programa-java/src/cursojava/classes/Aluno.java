@@ -3,7 +3,7 @@ package cursojava.classes;
 import java.util.ArrayList;
 import java.util.List;
 
-import cursojava.contantes.StartusAluno;
+import cursojava.contantes.StatusAluno;
 
 /* Classe que representa cada aluno */
 public class Aluno {
@@ -138,12 +138,12 @@ public class Aluno {
 		double media = this.getMediaNota();
 		if (media >= 50) {
 			if (media >= 70) {
-				return StartusAluno.APROVADO;
+				return StatusAluno.APROVADO;
 			} else {
-				return StartusAluno.RECUPERACAO;
+				return StatusAluno.RECUPERACAO;
 			}
 		} else {
-			return StartusAluno.REPROVADO;
+			return StatusAluno.REPROVADO;
 		}
 	}
 

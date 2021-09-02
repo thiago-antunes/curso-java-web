@@ -1,6 +1,6 @@
 package cursojava.contantes;
 
-public class StartusAluno {
+public class StatusAluno {
 	
 	public static String APROVADO = "Aprovado";
 	public static String RECUPERACAO = "Recuperação";
