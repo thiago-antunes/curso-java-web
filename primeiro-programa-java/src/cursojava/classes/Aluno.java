@@ -8,7 +8,6 @@ import cursojava.contantes.StatusAluno;
 /* Classe que representa cada aluno */
 public class Aluno extends Pessoa{
 
-	
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
@@ -187,6 +186,11 @@ public class Aluno extends Pessoa{
 	
 	public String msgMaiorIdade() {
 		return this.pessoaMaiorIdade() ? "Obaa você é maior de idade" : "Ixii você é menor de idade";
+	}
+
+	@Override
+	public double salario() {
+		return 1500.90;
 	}
 	
 }
