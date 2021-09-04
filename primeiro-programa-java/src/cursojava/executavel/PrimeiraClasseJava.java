@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.classes.Secretario;
 import cursojava.contantes.StatusAluno;
 
 public class PrimeiraClasseJava {
@@ -15,8 +16,12 @@ public class PrimeiraClasseJava {
 	public static void main(String[] args) {
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe a senha: ");
+		
+		Secretario secretario = new Secretario();
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
 
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		if (secretario.autenticar()) {
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
