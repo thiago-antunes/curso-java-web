@@ -7,10 +7,10 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
-import cursojava.classes.Secretario;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.contantes.StatusAluno;
-import cursojava.interfaces.PermitirAcesso;
 
 public class PrimeiraClasseJava {
 
@@ -18,9 +18,7 @@ public class PrimeiraClasseJava {
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe a senha: ");
 		
-		PermitirAcesso permiteAcesso = new Secretario(login, senha);
-
-		if (permiteAcesso.autenticar()) {
+		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
