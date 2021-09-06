@@ -115,8 +115,18 @@ public class PrimeiraClasseJava {
 				JOptionPane.showMessageDialog(null, "Login e/ou senha inválidos!");
 			}
 		} catch (Exception e) {
+			StringBuilder saida = new StringBuilder();
+			
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas -> " + e.getMessage());
+			
+			for(int pos = 0; pos < e.getStackTrace().length; pos++) {
+				saida.append("\n Classe de erro: " + e.getStackTrace()[pos].getClassName());
+				saida.append("\n Método de erro: " + e.getStackTrace()[pos].getMethodName());
+				saida.append("\n Linha de erro: " + e.getStackTrace()[pos].getLineNumber());
+				saida.append("\n Class: " + e.getClass().getName());
+			}
+			
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas -> " + saida.toString());
 		}
 	}
 }
