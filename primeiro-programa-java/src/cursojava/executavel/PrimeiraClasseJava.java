@@ -10,14 +10,17 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
 import cursojava.contantes.StatusAluno;
+import cursojava.interfaces.PermitirAcesso;
 
 public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe a senha: ");
+		
+		PermitirAcesso permiteAcesso = new Secretario(login, senha);
 
-		if (new Secretario().autenticar(login, senha)) {
+		if (permiteAcesso.autenticar()) {
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
