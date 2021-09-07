@@ -14,7 +14,6 @@ import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
 import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.contantes.StatusAluno;
-import cursojava.excecao.ExcecaoProcessarNota;
 
 public class PrimeiraClasseJava {
 
@@ -116,7 +115,7 @@ public class PrimeiraClasseJava {
 			} else {
 				JOptionPane.showMessageDialog(null, "Login e/ou senha inválidos!");
 			}
-		} catch (NumberFormatException e) {
+		} catch (Exception e) {
 			StringBuilder saida = new StringBuilder();
 			
 			e.printStackTrace();
@@ -129,24 +128,13 @@ public class PrimeiraClasseJava {
 			}
 			
 			JOptionPane.showMessageDialog(null, "Erro ao processar notas -> " + saida.toString());
-		} catch(NullPointerException e) {
-			JOptionPane.showMessageDialog(null, "Opa um NullPointerException : " + e.getClass());
-		} catch(ExcecaoProcessarNota e) {
-			JOptionPane.showMessageDialog(null, "Erro da exceção customizada : " + e.getClass());
-		} catch(Exception e) {
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Erro não previsto: " + e.getClass().getName());
-		} finally {
+		}  finally {
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java comigo.");
 		}
 	}
 	
-	public static void lerArquivo() throws ExcecaoProcessarNota {
-		try {
-			File fil = new File("lines.txt");
-			Scanner scanner = new Scanner(fil);
-		} catch (FileNotFoundException e) {
-			throw new ExcecaoProcessarNota(e.getMessage());
-		}
+	public static void lerArquivo() throws FileNotFoundException {
+		File fil = new File("lines.txt");
+		Scanner scanner = new Scanner(fil);
 	}
 }
