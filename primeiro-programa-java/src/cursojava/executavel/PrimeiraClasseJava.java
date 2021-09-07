@@ -133,6 +133,8 @@ public class PrimeiraClasseJava {
 		} catch(Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Erro não previsto: " + e.getClass().getName());
+		} finally {
+			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java comigo.");
 		}
 	}
 }
