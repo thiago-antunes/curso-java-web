@@ -1,6 +1,7 @@
 package cursojava.executavel;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,14 +14,14 @@ import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
 import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.contantes.StatusAluno;
+import cursojava.excecao.ExcecaoProcessarNota;
 
 public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
 
 		try {
-			File fil = new File("lines.txt");
-			Scanner scanner = new Scanner(fil);
+			lerArquivo();
 			
 			String login = JOptionPane.showInputDialog("Informe o login: ");
 			String senha = JOptionPane.showInputDialog("Informe a senha: ");
@@ -130,11 +131,22 @@ public class PrimeiraClasseJava {
 			JOptionPane.showMessageDialog(null, "Erro ao processar notas -> " + saida.toString());
 		} catch(NullPointerException e) {
 			JOptionPane.showMessageDialog(null, "Opa um NullPointerException : " + e.getClass());
+		} catch(ExcecaoProcessarNota e) {
+			JOptionPane.showMessageDialog(null, "Erro da exceção customizada : " + e.getClass());
 		} catch(Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Erro não previsto: " + e.getClass().getName());
 		} finally {
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java comigo.");
+		}
+	}
+	
+	public static void lerArquivo() throws ExcecaoProcessarNota {
+		try {
+			File fil = new File("lines.txt");
+			Scanner scanner = new Scanner(fil);
+		} catch (FileNotFoundException e) {
+			throw new ExcecaoProcessarNota(e.getMessage());
 		}
 	}
 }
