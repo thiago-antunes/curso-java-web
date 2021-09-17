@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Disciplina {
 
 	private String disciplina;
-	private double[] nota = new double[4];
+	private double[] notas = new double[4];
 
 	/* Métodos getters e setters */
 	public String getDisciplina() {
@@ -17,17 +17,17 @@ public class Disciplina {
 	}
 
 	public double[] getNota() {
-		return nota;
+		return notas;
 	}
 
 	public void setNota(double[] nota) {
-		this.nota = nota;
+		this.notas = nota;
 	}
 	
 	public double getMediaNotas() {
 		double somaTotal = 0.0;
-		for (int pos = 0; pos < nota.length; pos++) {
-			somaTotal += nota[pos];
+		for (int pos = 0; pos < notas.length; pos++) {
+			somaTotal += notas[pos];
 		}
 		return somaTotal / 4;
 	}
@@ -37,7 +37,7 @@ public class Disciplina {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((disciplina == null) ? 0 : disciplina.hashCode());
-		result = prime * result + Arrays.hashCode(nota);
+		result = prime * result + Arrays.hashCode(notas);
 		return result;
 	}
 
@@ -55,14 +55,14 @@ public class Disciplina {
 				return false;
 		} else if (!disciplina.equals(other.disciplina))
 			return false;
-		if (!Arrays.equals(nota, other.nota))
+		if (!Arrays.equals(notas, other.notas))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Disciplina [disciplina=" + disciplina + ", nota=" + nota + "]";
+		return "Disciplina [disciplina=" + disciplina + ", nota=" + notas + "]";
 	}
 
 }
