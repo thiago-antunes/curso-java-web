@@ -42,6 +42,19 @@ public class ArrayVetor {
 				}
 			}
 			System.out.println("A maior nota da disciplina " + d.getDisciplina() + " é: " + notaMax);
+			
+			double notaMin = 1000.00;
+			for (int pos = 1; pos < d.getNota().length; pos++) {
+				System.out.println("Nota " + pos + ": " + d.getNota()[pos]);
+				if(pos == 0) {
+					notaMin = d.getNota()[pos];
+				} else {
+					if(d.getNota()[pos] < notaMin) {
+						notaMin = d.getNota()[pos];
+					}
+				}
+			}
+			System.out.println("A menor nota da disciplina " + d.getDisciplina() + " é: " + notaMin);
 		}
 	}
 
