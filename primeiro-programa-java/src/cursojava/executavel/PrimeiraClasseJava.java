@@ -1,11 +1,8 @@
 package cursojava.executavel;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -56,7 +53,7 @@ public class PrimeiraClasseJava {
 
 					for (int pos = 1; pos <= 1; pos++) {
 						String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + "?");
-						String notaDisciplina = JOptionPane.showInputDialog("Nota	 da disciplina " + pos + "?");
+						//String notaDisciplina = JOptionPane.showInputDialog("Nota	 da disciplina " + pos + "?");
 
 						Disciplina disciplina = new Disciplina();
 						disciplina.setDisciplina(nomeDisciplina);
@@ -133,8 +130,8 @@ public class PrimeiraClasseJava {
 		}
 	}
 	
-	public static void lerArquivo() throws FileNotFoundException {
+	/*public static void lerArquivo() throws FileNotFoundException {
 		File fil = new File("lines.txt");
 		Scanner scanner = new Scanner(fil);
-	}
+	}*/
 }
