@@ -33,7 +33,7 @@ public class TelaTimeThread extends JDialog {
 		
 		GridBagConstraints gridBagConstraints = new GridBagConstraints(); /*Controlador de posicionamento de componentes*/
 		gridBagConstraints.gridy = 0;
-		gridBagConstraints.gridy = 0;
+		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridwidth = 2;
 		gridBagConstraints.insets = new Insets(5, 10, 5, 5);
 		gridBagConstraints.anchor = GridBagConstraints.WEST;
