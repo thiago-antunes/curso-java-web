@@ -14,7 +14,7 @@ public class ImplementacaoFilaThread extends Thread {
 	@Override
 	public void run() {
 		Iterator iteracao = pilha_fila.iterator();
-		while(iteracao.hasNext()) { /*Enquanto houver dados na lista irá processar*/
+		while(iteracao.hasNext()) { /*Enquanto conter dados na lista irá processar*/
 			
 		}
 	}
